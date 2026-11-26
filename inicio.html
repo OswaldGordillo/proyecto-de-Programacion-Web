@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio - Tiempo con Propósito</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- ACÁ VA LA BARRA LATERAL CON EL MENU DE NAVEGACIÓN-->
+    <aside>
+        <header>
+            <h2>Tiempo con propósito</h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html" class="activo">Inicio</a></li> 
+                <!-- nota: acá se pone en clase activo para que el sistema sepa exactamente sobre qué página nos encontramos -->
+                <li><a href="prioridades.html">Prioridades</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="auditoria.html">Auditoría</a></li>
+                <li><a href="revision.html">Revisión</a></li>
+                <li><a href="configuracion.html">Configuración</a></li>
+                <li><a href="cerrar-sesion.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!--ACÁ SE ENCIERRA EL CONTENEDOR PRINCIPAL PARA TENER UNA CLASE ESPECIFICA EN EL ESTILO--->
+    <section class="contenedor-principal">
+        <!--ACÁ ESTÁ EL ENCABEZADO-->
+        <header class="encabezado-superior">
+            <section>
+                <h1>Bienvenido, Usuario</h1>
+                <p class="subtitulo">Organiza tu tiempo, alcanza tus metas</p>
+            </section>
+            <section id="semana">
+                Semana: Esta semana
+            </section>
+        </header>
+        
+        <main>
+            <!--ACÁ ESTÁN LOS KPI-->
+            <section class="seccion-kpis">
+                <!--ACÁ ESTÁ EL BANNER-->
+                <article>
+                    <h2>Tu tiempo tiene valor</h2>
+                    <p>Aquí puedes ver cuánto tiempo te queda y cómo lo estás usando.</p>
+                </article>
+                <!--ACÁ ESTÁ EL KPI DE TIEMPO TOTAL-->
+                <article>
+                    <h2>1.440 min</h2>
+                    <p>Total diario</p>
+                </article>
+                <!--ACÁ ESTÁ EL KPI DE TIEMPO QUE SOBRA-->
+                <article>
+                    <h2>Tiempo que sobra</h2>
+                    <p>Minutos disponibles</p>
+                </article>
+                <!--ACÁ ESTÁ EL KPI DE PRIORIDADES-->
+                <article>
+                    <h2>Prioridades</h2>
+                    <p>(2 - 4 activas)</p>
+                </article>
+                <!--ACÁ ESTÁ EL KPI DE ACTIVIDADES-->
+                <article>
+                    <h2>Total de actividades</h2>
+                    <p>(Esta semana)</p>
+                </article>
+            </section>
+
+            <!-- ACÁ VA EL MÓDULO DE INICIO (COPY PASTE)-->
+            <section id="inicio" class="modulo-tarjeta">
+                 <table>
+                <caption>Planificador semanal</caption>
+                <thead>
+                    <tr>
+                        <th>lunes</th>
+                        <th>martes</th>
+                        <th>miércoles</th>
+                        <th>jueves</th>
+                        <th>viernes</th>
+                        <th>sábado</th>
+                        <th>domingo</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                </tbody>
+            </table>
+          </section>
+        </main>
+    </section>
+</body>
+</html>

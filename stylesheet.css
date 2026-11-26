@@ -1,0 +1,403 @@
+@import url('https://googleapis.com');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* --- ESTILO PARA EL CUERPO DE LA PÁGINA --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7F7F5;
+    color: #111111;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- FORMA DE LA BARRA LATERAL --- */
+aside {
+    width: 250px;
+    background-color: #0F172A;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+/* --- ENCABEZADO DE LA BARRA LATERAL --- */
+aside header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 36px;
+    padding-left: 12px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+/* --- NAVEGACION DE LA LISTA DE LA BARRA LATERAL --- */
+aside nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ENLACES DEL MENU DE NAVEGACION */
+aside nav a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+}
+
+/* EFECTO CUANDO SE PASA EL CURSOR POR ENCIMA */
+aside nav a:hover {
+    background-color: #694bd3;
+    font-weight: 600;
+    color: #111111;
+}
+
+/* ESTILO DE ENLACE ACTIVO */
+aside nav a.activo {
+    background-color: #221a69;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* --- CONTENEDOR DERECHO (HEADER + MAIN) --- */
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffbfb;
+}
+
+/* ENCABEZADO SUPERIOR */
+.encabezado-superior {
+    background-color: #fffbfb;
+    border-bottom: 2px solid #E5E5E5;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TITULO DE ENCABEZADO SUPERIOR */
+.encabezado-superior h1 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+    font-weight: 900;
+}
+
+/* SUBTITULO DE ENCABEZADO SUPERIOR */
+.encabezado-superior .subtitulo {
+    font-size: 13px;
+    color: #383838;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* CUADRO DE RANGO (SEMANA) */
+#semana {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- ÁREA DE CONTENIDO (MAIN) --- */
+main {
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1200px;
+}
+
+/* --- 4 TARJETAS SUPERIORES (KPIs) --- */
+.seccion-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* BANNER PRINCIPAL (TU TIEMPO TIENE VALOR) */
+.seccion-kpis article:first-child {
+    grid-column: 1 / -1;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 14px;
+    padding: 22px 26px;
+}
+
+/* TÍTULO DEL BANNER PRINCIPAL */
+.seccion-kpis article:first-child h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+/* CUADROS DE KPI */
+.seccion-kpis article:not(:first-child) {
+    font-size: 14px;
+    color: #64748B;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* TÍTULO DE LOS CUADROS DE KPI */
+.seccion-kpis article:not(:first-child) h2 {
+    color: #000000;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+/* --- MÓDULOS INFERIORES (TARJETAS BLANCAS) --- */
+.modulo-tarjeta {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+/* TÍTULO Y SUBTÍTULO DE LAS TARJETAS */
+.modulo-tarjeta h2, 
+.modulo-tarjeta h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* --- TABLA DEL PLANIFICADOR SEMANAL --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* TÍTULO DEL PLANIFICADOR SEMANAL */
+table caption {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* DIAS DE LA SEMANA (TH) Y DIAS DEL MES (TD)*/
+th, td {
+    border: 1px solid #EAEAEA;
+    padding: 14px 8px;
+    font-size: 14px;
+}
+
+/* ESTILO DISTINTIVO PARA LOS DIAS DE LA SEMANA*/
+th {
+    background-color: #FAFAFA;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #555555;
+}
+
+/* --- LISTAS DE ACTIVIDADES Y AUDITORÍA --- */
+.modulo-tarjeta ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ELEMENTOS DE LAS LISTAS (ACTIVIDADES, AUDITORIA) */
+.modulo-tarjeta li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 15px;
+}
+
+/* DISTRIBUCION DEL TIEMPO SEMANAL ALINEADO */
+.modulo-tarjeta figcaption {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+/* BLOQUE DE REVISION */
+.plan-ejecuta {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+/* CUADRO DE REVISION */
+.plan-ejecuta article {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* CUADROS PARA LOS ELEMENTOS PRICIPALES */
+.modulo-tarjeta p {
+    margin-bottom: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: center;
+}
+
+/*RESPONSIVE TABLET (1024px)------------------------------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+
+    /* LA BARRA LATERAL OCUPE MENOS ESPACIO */
+    aside {
+        width: 210px;
+        padding: 24px 14px;
+    }
+
+    /* EL ENCABEZADO TENGA MENOS ESPACIO DENTRO */
+    .encabezado-superior {
+        padding: 20px 24px;
+    }
+
+    /* EL TÍTULO DEL ENCABEZADO TENGA MENOS TAMAÑO */
+    .encabezado-superior h1 {
+        font-size: 24px;
+    }
+
+    /* EL CONTENIDO PRINCIPAL TENGA MENOS ESPACIO */
+    main {
+        padding: 24px;
+    }
+
+    /* 4 KPIs EN DOS COLUMNAS */
+    .seccion-kpis {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+}
+
+/* RESPONSIVE: MÓVIL (hasta 768px)------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+    /* EL BODY SE APILA VERTICALMENTE CON EL MENU DE NAVEGACION */
+    body {
+        flex-direction: column;
+    }
+
+    /* LA BARRA LATERAL OCUPA TODO EL ANCHO Y SE APILA */
+    aside {
+        width: 100%;
+        padding: 16px;
+    }
+
+    /* EL ENCABEZADO DE LA BARRA LATERAL TENGA MENOS ESPACIO */
+    aside header h2 {
+        margin-bottom: 14px;
+        padding-left: 4px;
+    }
+
+    /* LOS ENLACES DE NAVEGACIÓN SE DISTRIBUYEN EN UNA FILA SUPERIOR */
+    aside nav ul {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    /* BOTONES MÁS COMPACTOS */
+    aside nav a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* EL ENCABEZADO SUPERIOR SE ACOMODA EN COLUMNAS */
+    .encabezado-superior {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px 16px;
+    }
+
+    /* EL TÍTULO DEL ENCABEZADO TENGA MENOS TAMAÑO */
+    .encabezado-superior h1 {
+        font-size: 22px;
+    }
+
+    /* DARLE UN POQUITO DE ESPACIO ENTRE EL SUBITITULO Y RANGO */
+    .encabezado-superior .subtitulo {
+        margin-bottom: 8px;
+    }
+
+    /* EL CONTENIDO PRINCIPAL TENGA MENOS ESPACIO */
+    main {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    /* LA LETRA DE LOS KPIS SE VUELVE MAS PEQUEÑA */
+    .seccion-kpis article:not(:first-child) {
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    /* LOS TITULOS DE LOS KPIS SE VUELVEN MAS PEQUEÑOS */
+    .seccion-kpis article:not(:first-child) h2 {
+        font-size: 15px;
+    }
+
+    /* EL CONTENIDO DE LAS TARJETAS SE VUELVE MAS COMPACTO */
+    .modulo-tarjeta {
+        padding: 16px;
+    }
+
+    /* LA LETRA DEL PLANIFICADOR SE VUELVE MAS PEQUEÑA */
+    th, td {
+        padding: 10px 6px;
+        font-size: 12px;
+    }
+
+    /* LOS ELEMENTOS DE LA LISTA EN LAS TARJETAS SE VUELVEN MAS PEQUEÑOS */
+    .modulo-tarjeta li {
+        flex-wrap: wrap;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* MENOS ESPACIO EN DISTRIBUCIÓN DE TEMPO SEMANAL */
+    .modulo-tarjeta figcaption {
+        margin-bottom: 24px;
+    }
+    
+    /* PLANEADO VS EJECUTADO SE AGRUPA EN COLUMNA */
+    .plan-ejecuta {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    }
+}
